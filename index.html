@@ -1717,7 +1717,7 @@ target="_blank">
 
 </a>
 <script>
-// Contact form -> opens the user's email client with prefilled message
+// Contact form -> opens a pre-filled Gmail compose window (works in any browser, no local mail app required)
 const contactForm = document.querySelector('.contact-form');
 
 contactForm.addEventListener('submit', (e) => {
@@ -1736,7 +1736,9 @@ contactForm.addEventListener('submit', (e) => {
   const mailSubject = encodeURIComponent(subject || `Portfolio contact from ${name}`);
   const mailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
 
-  window.location.href = `mailto:Shaikyousuf0802@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=Shaikyousuf0802@gmail.com&su=${mailSubject}&body=${mailBody}`;
+
+  window.open(gmailComposeUrl, '_blank');
 });
 </script>
 
