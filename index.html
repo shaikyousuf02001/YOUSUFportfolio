@@ -3,738 +3,1796 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shaik Mohammed Yousuf Abdullah — MEP Design Engineer</title>
+
+<title>Shaik Mohammed Yousuf Abdullah | Mechanical & MEP Engineer</title>
+
+<meta name="description" content="Professional Portfolio of Shaik Mohammed Yousuf Abdullah - Mechanical Design Engineer, HVAC, Fire Fighting, Plumbing & MEP Engineer">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <style>
-  :root{
-    --ink-navy:#16273F;
-    --ink-navy-2:#1E3654;
-    --paper:#ECE7D8;
-    --paper-2:#E3DDC9;
-    --paper-line:#C9C0A4;
-    --ink-text:#1B2430;
-    --ink-muted:#5B5749;
-    --line-blue:#4C7EA8;
-    --line-blue-soft:#8FB2CC;
-    --sys-hvac:#C99A34;
-    --sys-fire:#A13D2B;
-    --sys-plumb:#4C7A52;
-    --sys-elec:#B6631C;
-    --paper-text-on-navy:#D9E2EC;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:.001ms !important; transition-duration:.001ms !important;}
-  }
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink-text);
-    font-family:'IBM Plex Sans', sans-serif;
-    font-size:16px;
-    line-height:1.55;
-  }
-  a{color:inherit;}
-  h1,h2,h3{
-    font-family:'Oswald', sans-serif;
-    text-transform:uppercase;
-    margin:0;
-    letter-spacing:.03em;
-  }
-  .mono{font-family:'IBM Plex Mono', monospace;}
-  .wrap{max-width:1080px; margin:0 auto; padding:0 28px;}
 
-  /* ---------- grid paper texture ---------- */
-  .grid-bg{
-    background-image:
-      linear-gradient(var(--line-blue-soft) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line-blue-soft) 1px, transparent 1px);
-    background-size:26px 26px;
-    background-position:-1px -1px;
-  }
-  .grid-bg-navy{
-    background-image:
-      linear-gradient(rgba(143,178,204,.16) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(143,178,204,.16) 1px, transparent 1px);
-    background-size:26px 26px;
-  }
+.section{
+padding:100px 9%;
+}
 
-  /* ---------- top nav / sheet index ---------- */
-  .sheet-index{
-    position:sticky; top:0; z-index:50;
-    background:var(--ink-navy);
-    border-bottom:2px solid var(--line-blue);
-  }
-  .sheet-index .wrap{
-    display:flex; align-items:center; justify-content:space-between;
-    padding-top:12px; padding-bottom:12px;
-    gap:16px;
-  }
-  .sheet-index .brand{
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--paper-text-on-navy);
-    font-size:12px;
-    letter-spacing:.08em;
-    white-space:nowrap;
-  }
-  .sheet-index .brand strong{color:#fff; font-weight:600;}
-  .sheet-nav{
-    display:flex; gap:4px; flex-wrap:wrap; justify-content:flex-end;
-  }
-  .sheet-nav a{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    letter-spacing:.04em;
-    text-decoration:none;
-    color:var(--paper-text-on-navy);
-    border:1px solid rgba(143,178,204,.4);
-    padding:5px 9px;
-    white-space:nowrap;
-    transition:background .15s ease, color .15s ease;
-  }
-  .sheet-nav a:hover, .sheet-nav a:focus-visible{
-    background:var(--line-blue);
-    color:#fff;
-    outline:none;
-  }
+.container{
+max-width:1200px;
+margin:auto;
+}
 
-  /* ---------- section header bar (drawing sheet title strip) ---------- */
-  .sheet-header{
-    display:flex; align-items:baseline; justify-content:space-between;
-    border-bottom:2px solid var(--ink-navy);
-    padding-bottom:10px; margin-bottom:28px;
-    flex-wrap:wrap; gap:8px;
-  }
-  .sheet-header h2{font-size:22px; color:var(--ink-navy);}
-  .sheet-header .code{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px; color:var(--ink-muted);
-    letter-spacing:.05em;
-  }
-  section{padding:64px 0;}
-  section + section{border-top:1px solid var(--paper-line);}
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
 
-  /* ---------- HERO / MEP-00 ---------- */
-  .hero{
-    background:var(--ink-navy);
-    color:var(--paper-text-on-navy);
-    padding:72px 0 0 0;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero .wrap{position:relative; z-index:2;}
-  .hero-top{
-    display:flex; justify-content:space-between; align-items:flex-start;
-    gap:24px; flex-wrap:wrap;
-  }
-  .hero-eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    letter-spacing:.15em;
-    color:var(--line-blue-soft);
-    margin-bottom:14px;
-  }
-  .hero h1{
-    font-size:clamp(34px, 5vw, 54px);
-    color:#fff;
-    line-height:1.05;
-    max-width:11ch;
-  }
-  .hero .role{
-    font-family:'Oswald', sans-serif;
-    text-transform:uppercase;
-    font-size:clamp(15px,2vw,19px);
-    color:var(--line-blue-soft);
-    margin-top:14px;
-    letter-spacing:.06em;
-  }
-  .hero .role .divider{color:rgba(217,226,236,.35); margin:0 6px;}
-  .hero p.pitch{
-    max-width:56ch;
-    margin-top:22px;
-    color:rgba(217,226,236,.85);
-    font-size:15.5px;
-  }
-  .hero-cta{
-    display:flex; gap:12px; margin-top:28px; flex-wrap:wrap;
-  }
-  .btn{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12.5px;
-    letter-spacing:.05em;
-    text-decoration:none;
-    padding:11px 18px;
-    display:inline-flex; align-items:center; gap:8px;
-    border:1px solid var(--line-blue-soft);
-    color:#fff;
-    transition:transform .15s ease, background .15s ease;
-  }
-  .btn:hover, .btn:focus-visible{background:var(--line-blue); outline:none;}
-  .btn.solid{background:var(--sys-fire); border-color:var(--sys-fire);}
-  .btn.solid:hover{background:#8a3223;}
+.section-title h2{
+font-size:42px;
+color:#00e5ff;
+}
 
-  /* title block */
-  .title-block{
-    margin-top:56px;
-    border-top:1px solid rgba(143,178,204,.4);
-    display:grid;
-    grid-template-columns:repeat(6, 1fr);
-  }
-  .title-block .cell{
-    border-right:1px solid rgba(143,178,204,.35);
-    border-bottom:1px solid rgba(143,178,204,.35);
-    padding:14px 16px;
-  }
-  .title-block .cell:last-child{border-right:none;}
-  .title-block .cell .label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:9.5px; letter-spacing:.1em;
-    color:var(--line-blue-soft);
-    text-transform:uppercase;
-    margin-bottom:5px;
-  }
-  .title-block .cell .val{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12.5px; color:#fff;
-  }
-  @media (max-width:800px){
-    .title-block{grid-template-columns:repeat(2,1fr);}
-  }
-  @media (max-width:480px){
-    .title-block{grid-template-columns:repeat(1,1fr);}
-  }
+.section-title p{
+color:#bbb;
+margin-top:10px;
+}
 
-  /* ---------- SCOPE OF WORK / MEP-01 ---------- */
-  #scope p{max-width:74ch; font-size:16.5px; color:var(--ink-text);}
-  #scope .stat-row{
-    display:flex; gap:0; margin-top:36px; flex-wrap:wrap;
-    border-top:1px solid var(--ink-navy);
-    border-bottom:1px solid var(--ink-navy);
-  }
-  #scope .stat{
-    flex:1 1 150px;
-    padding:18px 20px;
-    border-right:1px solid var(--paper-line);
-  }
-  #scope .stat:last-child{border-right:none;}
-  #scope .stat .num{
-    font-family:'Oswald', sans-serif;
-    font-size:34px; color:var(--ink-navy);
-    line-height:1;
-  }
-  #scope .stat .lbl{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:10.5px; color:var(--ink-muted);
-    letter-spacing:.06em; text-transform:uppercase;
-    margin-top:6px;
-  }
+.about-grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:40px;
+}
 
-  /* ---------- SYSTEM SPECIFICATIONS / SKILLS ---------- */
-  .sys-grid{
-    display:grid; grid-template-columns:repeat(2,1fr); gap:18px;
-  }
-  @media (max-width:700px){.sys-grid{grid-template-columns:1fr;}}
-  .sys-card{
-    background:#fff;
-    border:1px solid var(--paper-line);
-  }
-  .sys-flag{
-    display:flex; align-items:center; gap:10px;
-    padding:12px 16px;
-    color:#fff;
-    position:relative;
-  }
-  .sys-flag::after{
-    content:"";
-    position:absolute; right:-14px; top:0; bottom:0; width:14px;
-    background:inherit;
-    clip-path:polygon(0 0, 100% 50%, 0 100%);
-  }
-  .sys-flag .icon{width:22px; height:22px; flex:none;}
-  .sys-flag h3{color:#fff; font-size:15px; letter-spacing:.05em;}
-  .sys-hvac .sys-flag{background:var(--sys-hvac);}
-  .sys-fire .sys-flag{background:var(--sys-fire);}
-  .sys-plumb .sys-flag{background:var(--sys-plumb);}
-  .sys-elec .sys-flag{background:var(--sys-elec);}
-  .sys-body{padding:18px 20px 20px 30px;}
-  .sys-body ul{margin:0; padding:0; list-style:none;}
-  .sys-body li{
-    font-size:14.5px;
-    padding:6px 0;
-    border-bottom:1px dashed var(--paper-line);
-    color:var(--ink-text);
-  }
-  .sys-body li:last-child{border-bottom:none;}
+.about-card,
+.info-box,
+.service-card,
+.software-card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
 
-  .tool-strip{margin-top:30px;}
-  .tool-strip .sub-label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px; color:var(--ink-muted); letter-spacing:.08em;
-    text-transform:uppercase; margin-bottom:12px;
-  }
-  .chip-row{display:flex; flex-wrap:wrap; gap:8px;}
-  .chip{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    padding:7px 12px;
-    background:var(--paper-2);
-    border:1px solid var(--paper-line);
-    color:var(--ink-text);
-  }
+.about-card:hover,
+.info-box:hover,
+.service-card:hover,
+.software-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(0,229,255,.2);
+}
 
-  /* ---------- PROJECT LOG (table) ---------- */
-  table.log{
-    width:100%; border-collapse:collapse;
-    font-size:14.5px;
-  }
-  table.log th{
-    font-family:'IBM Plex Mono', monospace;
-    text-align:left;
-    font-size:10.5px; letter-spacing:.08em; text-transform:uppercase;
-    color:#fff; background:var(--ink-navy);
-    padding:10px 14px;
-  }
-  table.log td{
-    padding:12px 14px;
-    border-bottom:1px solid var(--paper-line);
-    vertical-align:top;
-  }
-  table.log tr:nth-child(even) td{background:rgba(255,255,255,.5);}
-  .tag-sm{
-    display:inline-block;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:10px; letter-spacing:.04em;
-    padding:3px 7px;
-    color:#fff;
-  }
-  .tag-sm.hvac{background:var(--sys-hvac);}
-  .tag-sm.fire{background:var(--sys-fire);}
-  .tag-sm.plumb{background:var(--sys-plumb);}
-  .tag-sm.mep{background:var(--line-blue);}
-  .tag-sm.mech{background:var(--ink-muted);}
+.about-info{
+display:grid;
+gap:20px;
+}
 
-  .log-sub-title{
-    margin-top:44px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px; letter-spacing:.08em; text-transform:uppercase;
-    color:var(--ink-muted); margin-bottom:14px;
-  }
+.services,
+.software-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-  /* ---------- REVISION HISTORY (experience) ---------- */
-  .rev-block{
-    border:1px solid var(--ink-navy);
-  }
-  .rev-top{
-    display:flex; justify-content:space-between; align-items:center;
-    background:var(--ink-navy); color:#fff;
-    padding:14px 20px; flex-wrap:wrap; gap:8px;
-  }
-  .rev-top .rname{font-family:'Oswald',sans-serif; font-size:18px; letter-spacing:.03em;}
-  .rev-top .rmeta{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--line-blue-soft);}
-  .rev-body{padding:22px 24px; background:#fff;}
-  .rev-body ul{margin:0; padding:0; list-style:none;}
-  .rev-body li{
-    position:relative;
-    padding:9px 0 9px 22px;
-    font-size:15px;
-    border-bottom:1px dashed var(--paper-line);
-  }
-  .rev-body li:last-child{border-bottom:none;}
-  .rev-body li::before{
-    content:"—";
-    position:absolute; left:0; top:9px;
-    color:var(--line-blue);
-    font-family:'IBM Plex Mono', monospace;
-  }
+.service-card i,
+.software-card i{
+font-size:45px;
+color:#00e5ff;
+margin-bottom:20px;
+}
 
-  /* ---------- CREDENTIALS ---------- */
-  .cred-grid{
-    display:grid; grid-template-columns:1fr 1fr; gap:36px;
-  }
-  @media (max-width:700px){.cred-grid{grid-template-columns:1fr;}}
-  .cred-grid h3{font-size:14px; color:var(--ink-navy); margin-bottom:14px; letter-spacing:.06em;}
-  .cred-item{margin-bottom:18px;}
-  .cred-item .t{font-weight:600; font-size:15px;}
-  .cred-item .s{font-size:13.5px; color:var(--ink-muted); font-family:'IBM Plex Mono', monospace; margin-top:2px;}
-  .stamp{
-    display:inline-flex; align-items:center; justify-content:center;
-    width:96px; height:96px;
-    border:2px solid var(--sys-fire);
-    border-radius:50%;
-    transform:rotate(-9deg);
-    color:var(--sys-fire);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:10.5px; letter-spacing:.04em; text-transform:uppercase;
-    text-align:center; line-height:1.3;
-    float:right; margin:0 0 12px 16px;
-    padding:8px;
-  }
+.skill{
+margin-bottom:25px;
+}
 
-  /* ---------- FOOTER / SIGN-OFF ---------- */
-  footer{
-    background:var(--ink-navy); color:var(--paper-text-on-navy);
-    padding:56px 0 30px;
-  }
-  footer .sheet-header{border-bottom-color:rgba(143,178,204,.4);}
-  footer .sheet-header h2{color:#fff;}
-  .contact-grid{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:0;
-    border-top:1px solid rgba(143,178,204,.35);
-    margin-top:24px;
-  }
-  @media (max-width:800px){.contact-grid{grid-template-columns:repeat(2,1fr);}}
-  .contact-grid .cell{
-    padding:16px 18px;
-    border-right:1px solid rgba(143,178,204,.3);
-    border-bottom:1px solid rgba(143,178,204,.3);
-  }
-  .contact-grid .cell:nth-child(4n){border-right:none;}
-  .contact-grid .label{
-    font-family:'IBM Plex Mono', monospace; font-size:9.5px;
-    letter-spacing:.1em; text-transform:uppercase; color:var(--line-blue-soft);
-    margin-bottom:6px;
-  }
-  .contact-grid .val{font-family:'IBM Plex Mono', monospace; font-size:13px;}
-  .contact-grid a.val{text-decoration:none; color:#fff;}
-  .contact-grid a.val:hover{color:var(--line-blue-soft);}
-  .foot-bottom{
-    margin-top:32px; padding-top:18px;
-    border-top:1px solid rgba(143,178,204,.25);
-    font-family:'IBM Plex Mono', monospace; font-size:11px;
-    color:rgba(217,226,236,.55);
-    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
-  }
+.skill-title{
+display:flex;
+justify-content:space-between;
+margin-bottom:8px;
+}
 
-  /* icons */
-  .icon svg{width:100%; height:100%; display:block;}
+.bar{
+height:12px;
+background:#1f2937;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+background:linear-gradient(90deg,#00bcd4,#00e5ff);
+border-radius:20px;
+}
+
+.about-card h3{
+    font-size:34px;
+    color:#00e5ff;
+    margin-bottom:25px;
+}
+
+.about-card p{
+    font-size:18px;
+    line-height:1.8;
+    max-width:700px;
+    color:#d6d6d6;
+}
+/* CONTACT */
+
+.contact-wrapper{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+}
+
+.contact-info h3{
+
+font-size:35px;
+
+margin-bottom:20px;
+
+}
+
+.contact-item{
+
+margin:25px 0;
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+font-size:18px;
+
+}
+
+.contact-item i{
+
+color:#00e5ff;
+
+font-size:22px;
+
+}
+
+.contact-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.contact-form input,
+
+.contact-form textarea{
+
+padding:18px;
+
+border:none;
+
+border-radius:12px;
+
+background:#111;
+
+color:white;
+
+}
+
+.contact-form button{
+
+border:none;
+
+cursor:pointer;
+
+}
+
+.social-icons{
+
+margin-top:30px;
+
+display:flex;
+
+gap:20px;
+
+}
+
+.social-icons a{
+
+width:55px;
+
+height:55px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#111;
+
+border-radius:50%;
+
+font-size:24px;
+
+color:#00e5ff;
+
+transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+transform:translateY(-6px);
+
+background:#00e5ff;
+
+color:white;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#050b15;
+
+padding:30px;
+
+text-align:center;
+
+}
+
+/* TOP BUTTON */
+
+#topBtn{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#00bcd4;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+display:none;
+
+z-index:999;
+
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+
+position:fixed;
+
+left:25px;
+
+bottom:25px;
+
+width:60px;
+
+height:60px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#25D366;
+
+border-radius:50%;
+
+color:white;
+
+font-size:32px;
+
+z-index:999;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:#08111d;
+color:white;
+overflow-x:hidden;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#00bcd4;
+border-radius:30px;
+}
+
+/* Animated Background */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+background:
+
+linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+
+linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+
+background-size:60px 60px;
+
+animation:gridMove 25s linear infinite;
+
+z-index:-2;
+
+}
+
+@keyframes gridMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(60px);
+
+}
+
+}
+
+/* Navbar */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 9%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(15px);
+
+z-index:999;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#00e5ff;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+margin-left:35px;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#00e5ff;
+
+}
+
+/* Hero */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:120px 9%;
+
+}
+
+.hero-container{
+
+display:grid;
+
+grid-template-columns:1fr 450px;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+.hero-text h4{
+
+font-size:20px;
+
+color:#00e5ff;
+
+margin-bottom:15px;
+
+}
+
+.hero-text h1{
+
+font-size:70px;
+
+line-height:1.1;
+
+margin-bottom:20px;
+
+}
+
+.hero-text h3{
+
+font-size:32px;
+
+color:#d8d8d8;
+
+margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#bcbcbc;
+
+margin-bottom:35px;
+
+max-width:700px;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:15px 35px;
+
+background:#00bcd4;
+
+border-radius:40px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 10px 30px rgba(0,188,212,.5);
+
+}
+
+.btn-outline{
+
+background:transparent;
+
+border:2px solid #00bcd4;
+
+}
+
+/* Hero Image */
+
+.hero-image{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.hero-image img{
+
+width:360px;
+
+height:360px;
+
+border-radius:50%;
+
+border:8px solid #00bcd4;
+
+object-fit:cover;
+
+box-shadow:0 0 80px rgba(0,188,212,.45);
+
+}
+
+/* Stats */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+margin-top:60px;
+
+gap:25px;
+
+}
+
+.stat{
+
+background:rgba(255,255,255,.05);
+
+padding:30px;
+
+border-radius:18px;
+
+text-align:center;
+
+transition:.4s;
+
+backdrop-filter:blur(15px);
+
+}
+
+.stat:hover{
+
+transform:translateY(-10px);
+
+}
+
+.stat h2{
+
+font-size:40px;
+
+color:#00e5ff;
+
+margin-bottom:8px;
+
+}
+
+.stat p{
+
+color:#ddd;
+
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+.hero-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-image{
+
+order:-1;
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-text h1{
+
+font-size:46px;
+
+}
+
+.hero-image img{
+
+width:250px;
+
+height:250px;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ================= Timeline ================= */
+
+.timeline{
+
+position:relative;
+
+margin-top:60px;
+
+padding-left:50px;
+
+border-left:3px solid #00e5ff;
+
+}
+
+.timeline-item{
+
+margin-bottom:60px;
+
+position:relative;
+
+}
+
+.timeline-item::before{
+
+content:'';
+
+position:absolute;
+
+left:-62px;
+
+top:0;
+
+width:20px;
+
+height:20px;
+
+background:#00e5ff;
+
+border-radius:50%;
+
+box-shadow:0 0 20px cyan;
+
+}
+
+.timeline-date{
+
+font-weight:bold;
+
+color:#00e5ff;
+
+margin-bottom:15px;
+
+}
+
+.timeline-content{
+
+background:rgba(255,255,255,.05);
+
+padding:30px;
+
+border-radius:20px;
+
+backdrop-filter:blur(15px);
+
+}
+
+.timeline-content ul{
+
+padding-left:20px;
+
+line-height:2;
+
+}
+
+/* ================= Projects ================= */
+
+.project-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+}
+
+.project-card{
+
+background:#111;
+
+border-radius:20px;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,229,255,.3);
+
+}
+
+.project-card img{
+
+width:100%;
+
+height:240px;
+
+object-fit:cover;
+
+}
+
+.project-info{
+
+padding:25px;
+
+}
+
+.project-info h3{
+
+margin-bottom:15px;
+
+}
+
+.project-info a{
+
+display:inline-block;
+
+margin-top:20px;
+
+color:#00e5ff;
+
+text-decoration:none;
+
+}
+
+/* ================= Certificates ================= */
+
+.certificate-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.certificate{
+
+background:rgba(255,255,255,.05);
+
+padding:35px;
+
+text-align:center;
+
+border-radius:20px;
+
+transition:.4s;
+
+font-size:22px;
+
+}
+
+.certificate:hover{
+
+transform:translateY(-10px);
+
+}
+
+.certificate p{
+margin-top:12px;
+font-size:14px;
+line-height:1.6;
+color:#a8c4cf;
+}
+
+/* ================= Gallery ================= */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:20px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+border-radius:20px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+
 </style>
+
 </head>
+
 <body>
 
-<nav class="sheet-index">
-  <div class="wrap">
-    <div class="brand"><strong>S.M. YOUSUF ABDULLAH</strong> &nbsp;/&nbsp; MEP DESIGN ENGINEER</div>
-    <div class="sheet-nav">
-      <a href="#scope">MEP-01 SCOPE</a>
-      <a href="#systems">SYS SPEC</a>
-      <a href="#projects">MEP-02 LOG</a>
-      <a href="#experience">MEP-03 REV</a>
-      <a href="#credentials">MEP-04 CRED</a>
-      <a href="#contact">MEP-05 CONTACT</a>
-    </div>
-  </div>
+<header>
+
+<div class="logo">
+SHAIK YOUSUF
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#skills">Skills</a>
+
+<a href="#experience">Experience</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#contact">Contact</a>
+
 </nav>
 
-<!-- HERO / TITLE BLOCK -->
-<header class="hero grid-bg-navy" id="top">
-  <div class="wrap">
-    <div class="hero-top">
-      <div>
-        <div class="hero-eyebrow mono">SHEET MEP-00 &nbsp;·&nbsp; COVER &amp; TITLE BLOCK</div>
-        <h1>Shaik Mohammed<br>Yousuf Abdullah</h1>
-        <div class="role">MEP Design Engineer <span class="divider">/</span> HVAC <span class="divider">·</span> Fire Fighting <span class="divider">·</span> Plumbing <span class="divider">·</span> Electrical</div>
-        <p class="pitch">Designing and coordinating building services for commercial &amp; residential developments — from load calculation to shop drawings — to ASHRAE, NFPA and SMACNA standards. Based in Hyderabad, targeting an MEP engineering role in the UAE.</p>
-        <div class="hero-cta">
-          <a class="btn solid" href="mailto:Shaikyousuf0802@gmail.com">EMAIL ME →</a>
-          <a class="btn" href="tel:+917993171808">CALL / WHATSAPP</a>
-          <a class="btn" href="#projects">VIEW PROJECT LOG</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="title-block">
-      <div class="cell"><div class="label">Sheet No.</div><div class="val">MEP-00</div></div>
-      <div class="cell"><div class="label">Discipline</div><div class="val">MEP / HVAC / FP</div></div>
-      <div class="cell"><div class="label">Location</div><div class="val">Hyderabad, IN</div></div>
-      <div class="cell"><div class="label">Target Region</div><div class="val">United Arab Emirates</div></div>
-      <div class="cell"><div class="label">Status</div><div class="val">Visit Visa · Available Now</div></div>
-      <div class="cell"><div class="label">Rev / Date</div><div class="val">A · Jul 2026</div></div>
-    </div>
-  </div>
 </header>
 
-<!-- SCOPE OF WORK -->
-<section id="scope" class="grid-bg">
-  <div class="wrap">
-    <div class="sheet-header">
-      <h2>Scope of Work</h2>
-      <div class="code mono">MEP-01 / SUMMARY</div>
-    </div>
-    <p>MEP Design Engineer with 3+ years designing, coordinating, and executing HVAC, Fire Fighting, Plumbing, and Electrical systems for commercial and residential developments, including high-rise buildings — in accordance with ASHRAE, NFPA, and SMACNA standards. Hands-on expertise in HVAC load calculation (Split, Ductable Split, and VRV up to 100&nbsp;TR), duct sizing, and fire sprinkler / fire pump system design using AutoCAD, Revit MEP, HAP, and Duct Sizer. Comfortable owning BOQs, material submittals, method statements, shop drawings, and schedules while coordinating clients, consultants, and site teams to keep multiple projects moving on time and on code.</p>
+<section class="hero" id="home">
 
-    <div class="stat-row">
-      <div class="stat"><div class="num">3+</div><div class="lbl">Years Experience</div></div>
-      <div class="stat"><div class="num">5+</div><div class="lbl">Concurrent Projects</div></div>
-      <div class="stat"><div class="num">100&nbsp;TR</div><div class="lbl">Max VRV Capacity Designed</div></div>
-      <div class="stat"><div class="num">6</div><div class="lbl">NDT Certifications</div></div>
-    </div>
-  </div>
+<div class="hero-container">
+
+<div class="hero-text">
+
+<h4>Hello, I'm</h4>
+
+<h1>Shaik Mohammed Yousuf Abdullah</h1>
+
+<h3>Mechanical Design & MEP Engineer</h3>
+
+<p>
+
+Specialized in HVAC, Fire Fighting, Plumbing,
+Mechanical Design, Revit MEP, AutoCAD,
+SolidWorks and HAP. Passionate about delivering
+efficient engineering solutions for commercial,
+industrial and residential projects.
+
+</p>
+
+<div class="buttons">
+
+<a href="#" class="btn">
+
+Download Resume
+
+</a>
+
+<a href="#projects" class="btn btn-outline">
+
+View Projects
+
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>3+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+<div class="stat">
+
+<h2>8+</h2>
+
+<p>Projects</p>
+
+</div>
+
+<div class="stat">
+
+<h2>100TR</h2>
+
+<p>VRV Design</p>
+
+</div>
+
+<div class="stat">
+
+<h2>15+</h2>
+
+<p>Software Skills</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="profile.png" alt="Profile">
+
+</div>
+
+</div>
+
 </section>
 
-<!-- SYSTEM SPECIFICATIONS -->
-<section id="systems" class="grid-bg">
-  <div class="wrap">
-    <div class="sheet-header">
-      <h2>System Specifications</h2>
-      <div class="code mono">SYS-SPEC / SKILLS &amp; COMPETENCIES</div>
-    </div>
 
-    <div class="sys-grid">
-      <div class="sys-card sys-hvac">
-        <div class="sys-flag">
-          <span class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M3 8h13a4 4 0 010 8H3M3 12h9"/></svg>
-          </span>
-          <h3>HVAC</h3>
-        </div>
-        <div class="sys-body">
-          <ul>
-            <li>Load calc &amp; system design — Split, Ductable Split, VRV up to 100 TR</li>
-            <li>Duct design &amp; sizing to SMACNA guidelines</li>
-            <li>AHU, FCU, FAHU selection &amp; chilled water systems</li>
-            <li>Smoke management, staircase pressurization &amp; ventilation</li>
-          </ul>
-        </div>
-      </div>
+<!-- ================= part-2 ================= -->
 
-      <div class="sys-card sys-fire">
-        <div class="sys-flag">
-          <span class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 3c2 3-1 4-1 6a3 3 0 106 0c0-1-1-2-1-3 2 1 3 4 3 6a7 7 0 11-14 0c0-4 3-6 7-9z"/></svg>
-          </span>
-          <h3>Fire Fighting</h3>
-        </div>
-        <div class="sys-body">
-          <ul>
-            <li>Sprinkler network design to NFPA</li>
-            <li>Fire water tank &amp; fire pump system design</li>
-            <li>High-rise fire safety compliance</li>
-            <li>Coordination with local fire safety authorities</li>
-          </ul>
-        </div>
-      </div>
+<!-- ================= ABOUT SECTION ================= -->
 
-      <div class="sys-card sys-plumb">
-        <div class="sys-flag">
-          <span class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M7 3v4a5 5 0 0010 0V3M12 12v9M8 21h8"/></svg>
-          </span>
-          <h3>Plumbing</h3>
-        </div>
-        <div class="sys-body">
-          <ul>
-            <li>Cold &amp; hot water system design</li>
-            <li>Drainage network design</li>
-            <li>Overhead / underground tank sizing</li>
-            <li>Pump sizing &amp; selection</li>
-          </ul>
-        </div>
-      </div>
+<section id="about" class="section">
 
-      <div class="sys-card sys-elec">
-        <div class="sys-flag">
-          <span class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
-          </span>
-          <h3>Electrical</h3>
-        </div>
-        <div class="sys-body">
-          <ul>
-            <li>MEP-integrated electrical coordination</li>
-            <li>Cross-discipline clash checks with HVAC &amp; FP routing</li>
-            <li>Support on electrical scope within commercial &amp; residential MEP sets</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<div class="container">
 
-    <div class="tool-strip">
-      <div class="sub-label mono">Design &amp; Modeling Software</div>
-      <div class="chip-row">
-        <span class="chip">AutoCAD</span><span class="chip">Revit MEP</span><span class="chip">SolidWorks</span>
-        <span class="chip">Creo</span><span class="chip">Inventor</span><span class="chip">ANSYS</span>
-        <span class="chip">HAP</span><span class="chip">Duct Sizer</span><span class="chip">E20-FORM</span>
-      </div>
-    </div>
-    <div class="tool-strip">
-      <div class="sub-label mono">Codes &amp; Standards</div>
-      <div class="chip-row">
-        <span class="chip">ASHRAE</span><span class="chip">NFPA</span><span class="chip">SMACNA</span>
-      </div>
-    </div>
-    <div class="tool-strip">
-      <div class="sub-label mono">NDT Testing (Certified)</div>
-      <div class="chip-row">
-        <span class="chip">PT</span><span class="chip">MPT</span><span class="chip">RT</span>
-        <span class="chip">RTFI</span><span class="chip">UT</span><span class="chip">VT</span>
-      </div>
-    </div>
-  </div>
+<div class="section-title">
+<h2>About Me</h2>
+<p>Professional Profile</p>
+</div>
+
+<div class="about-grid">
+
+<div class="about-card">
+
+<h3>Mechanical Design & MEP Engineer</h3>
+
+<p>
+
+I'm a passionate Mechanical Design Engineer with over
+3 years of experience in HVAC, Fire Fighting,
+Plumbing and Mechanical Engineering.
+
+I specialize in designing efficient building systems,
+preparing shop drawings, BOQs, heat load calculations,
+and coordinating multidisciplinary engineering projects.
+
+</p>
+
+<p>
+
+My goal is to deliver energy-efficient, code-compliant,
+and innovative engineering solutions using modern
+software tools and international standards.
+
+</p>
+
+</div>
+
+<div class="about-info">
+
+<div class="info-box">
+<h4>Experience</h4>
+<p>3 Years</p>
+</div>
+
+<div class="info-box">
+<h4>Projects</h4>
+<p>8+</p>
+</div>
+
+<div class="info-box">
+<h4>Country</h4>
+<p>India</p>
+</div>
+
+<div class="info-box">
+<h4>Target</h4>
+<p>UAE</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- PROJECT LOG -->
-<section id="projects" class="grid-bg">
-  <div class="wrap">
-    <div class="sheet-header">
-      <h2>Project Log</h2>
-      <div class="code mono">MEP-02 / PROJECT REGISTER</div>
-    </div>
+<!-- ================= SERVICES ================= -->
 
-    <table class="log">
-      <thead>
-        <tr><th>Project</th><th>Location</th><th>Discipline</th><th>Status</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Kollasoft India Pvt Ltd</td>
-          <td>Hyderabad</td>
-          <td><span class="tag-sm mep">MEP</span></td>
-          <td>Design &amp; Installation</td>
-        </tr>
-        <tr>
-          <td>Platina, Gachibowli</td>
-          <td>Hyderabad</td>
-          <td><span class="tag-sm mep">MEP</span></td>
-          <td>Design &amp; Installation</td>
-        </tr>
-        <tr>
-          <td>Leela Homes — Apartments</td>
-          <td>Guntur</td>
-          <td><span class="tag-sm hvac">HVAC/P</span></td>
-          <td>Proposed</td>
-        </tr>
-        <tr>
-          <td>Modern Builders — Commercial</td>
-          <td>Hyderabad</td>
-          <td><span class="tag-sm mep">MEP</span></td>
-          <td>Proposed</td>
-        </tr>
-        <tr>
-          <td>Happy Villas, Nanakramguda</td>
-          <td>Hyderabad</td>
-          <td><span class="tag-sm plumb">RESI</span></td>
-          <td>Proposed</td>
-        </tr>
-      </tbody>
-    </table>
+<section class="section">
 
-    <div class="log-sub-title">Cross-Discipline Mechanical Design Contributions</div>
-    <table class="log">
-      <tbody>
-        <tr>
-          <td style="width:34%">Drillmec Project</td>
-          <td>Structural design support for oil-rig mast structures — client skeleton models, verified sub-assemblies for ISO metric compliance to European standards.</td>
-        </tr>
-        <tr>
-          <td>DMDE Project</td>
-          <td>Converted 2D submarine valve drawings into 3D models for manufacturing &amp; QA.</td>
-        </tr>
-        <tr>
-          <td>DMDE Project</td>
-          <td>Supported design of an emergency aircraft arresting gear (energy absorber) system — ISO metric compliance &amp; market-availability review.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<div class="container">
+
+<div class="section-title">
+
+<h2>Engineering Services</h2>
+
+<p>What I Do</p>
+
+</div>
+
+<div class="services">
+
+<div class="service-card">
+
+<i class="fas fa-fan"></i>
+
+<h3>HVAC Design</h3>
+
+<p>
+
+Cooling Load Calculation
+
+Duct Design
+
+Equipment Selection
+
+VRV Systems
+
+Ventilation Design
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-fire-extinguisher"></i>
+
+<h3>Fire Fighting</h3>
+
+<p>
+
+Sprinkler Layout
+
+Hydrant System
+
+Fire Pump
+
+Tank Design
+
+NFPA Standards
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-faucet"></i>
+
+<h3>Plumbing</h3>
+
+<p>
+
+Water Supply
+
+Drainage
+
+Pump Sizing
+
+Tank Design
+
+Pipe Routing
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-drafting-compass"></i>
+
+<h3>Mechanical Design</h3>
+
+<p>
+
+3D Modeling
+
+Reverse Engineering
+
+Manufacturing Drawing
+
+Assembly Design
+
+BOM
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- REVISION HISTORY / EXPERIENCE -->
-<section id="experience" class="grid-bg">
-  <div class="wrap">
-    <div class="sheet-header">
-      <h2>Revision History</h2>
-      <div class="code mono">MEP-03 / PROFESSIONAL EXPERIENCE</div>
-    </div>
+<!-- ================= SKILLS ================= -->
 
-    <div class="rev-block">
-      <div class="rev-top">
-        <div class="rname">MEP Design Engineer — Suntech Building Services</div>
-        <div class="rmeta">REV A &nbsp;·&nbsp; DEC 2022 – FEB 2026 &nbsp;·&nbsp; HYDERABAD, INDIA</div>
-      </div>
-      <div class="rev-body">
-        <ul>
-          <li>Designed HVAC systems and performed load calculations for wall-mounted split, ductable split, and VRV units up to 100 TR, ensuring full ASHRAE compliance across 5+ concurrent projects.</li>
-          <li>Performed duct design and duct sizing calculations to SMACNA guidelines across 5+ concurrent commercial and residential projects.</li>
-          <li>Designed fire fighting systems — sprinkler networks, fire water tanks, and fire pump systems — for high-rise buildings to NFPA and local fire safety standards.</li>
-          <li>Designed plumbing systems covering cold water, hot water, and drainage, including overhead/underground tank and pump sizing.</li>
-          <li>Prepared BOQs, material submittals, method statements, shop drawings, and project schedules; coordinated approvals with consultants and clients.</li>
-          <li>Executed and commissioned ducting, piping, and centralized air conditioning, split, and package A/C installations across 5+ projects.</li>
-          <li>Conducted field verification and quality inspections alongside site supervisors and foremen; maintained accurate as-built drawings.</li>
-          <li>Delivered weekly progress reports to stakeholders, supporting on-time, on-budget execution across multiple simultaneous projects.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<section id="skills" class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Professional Skills</h2>
+
+<p>Technical Expertise</p>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">
+
+<span>AutoCAD</span>
+
+<span>98%</span>
+
+</div>
+
+<div class="bar">
+
+<div class="fill" style="width:98%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">
+
+<span>Revit MEP</span>
+
+<span>70%</span>
+
+</div>
+
+<div class="bar">
+
+<div class="fill" style="width:70%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">
+
+<span>SolidWorks</span>
+
+<span>95%</span>
+
+</div>
+
+<div class="bar">
+
+<div class="fill" style="width:95%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">
+
+<span>HVAC Design</span>
+
+<span>95%</span>
+
+</div>
+
+<div class="bar">
+
+<div class="fill" style="width:95%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">
+
+<span>Fire Fighting</span>
+
+<span>90%</span>
+
+</div>
+
+<div class="bar">
+
+<div class="fill" style="width:90%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">
+
+<span>Plumbing</span>
+
+<span>85%</span>
+
+</div>
+
+<div class="bar">
+
+<div class="fill" style="width:85%"></div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- CREDENTIALS -->
-<section id="credentials" class="grid-bg">
-  <div class="wrap">
-    <div class="sheet-header">
-      <h2>Credentials</h2>
-      <div class="code mono">MEP-04 / EDUCATION &amp; CERTIFICATIONS</div>
-    </div>
+<!-- ================= SOFTWARE ================= -->
 
-    <div class="cred-grid">
-      <div>
-        <h3 class="mono">EDUCATION</h3>
-        <div class="cred-item">
-          <div class="t">Bachelor of Technology (B.Tech), Mechanical Engineering</div>
-          <div class="s">Jawaharlal Nehru Technological University (JNTU) — 2022</div>
-        </div>
+<section class="section">
 
-        <h3 class="mono" style="margin-top:30px;">LANGUAGES</h3>
-        <div class="chip-row">
-          <span class="chip">English</span><span class="chip">Hindi</span><span class="chip">Telugu</span>
-        </div>
-      </div>
+<div class="container">
 
-      <div>
-        <div class="stamp">NDT<br>CERTIFIED<br>PT·MPT·RT<br>RTFI·UT·VT</div>
-        <h3 class="mono">CERTIFICATIONS</h3>
-        <div class="cred-item">
-          <div class="t">NDT Certifications</div>
-          <div class="s">Penetrant (PT) · Magnetic Particle (MPT) · Radiographic (RT) · Real-Time Radiography (RTFI) · Ultrasonic (UT) · Visual (VT)</div>
-        </div>
-        <div class="cred-item">
-          <div class="t">be10x AI Tools Workshop</div>
-          <div class="s">AI-powered presentation design, data analysis &amp; coding/debugging</div>
-        </div>
-        <div class="cred-item">
-          <div class="t">Autodesk Revit MEP / AutoCAD Professional</div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="section-title">
+
+<h2>Software</h2>
+
+<p>Engineering Tools</p>
+
+</div>
+
+<div class="software-grid">
+
+<div class="software-card">
+<i class="fas fa-pencil-ruler"></i>
+<h3>AutoCAD</h3>
+</div>
+
+<div class="software-card">
+<i class="fas fa-building"></i>
+<h3>Revit</h3>
+</div>
+
+<div class="software-card">
+<i class="fas fa-cube"></i>
+<h3>SolidWorks</h3>
+</div>
+
+<div class="software-card">
+<i class="fas fa-snowflake"></i>
+<h3>HAP</h3>
+</div>
+
+<div class="software-card">
+<i class="fas fa-industry"></i>
+<h3>Creo</h3>
+</div>
+
+<div class="software-card">
+<i class="fas fa-layer-group"></i>
+<h3>Inventor</h3>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- CONTACT / SIGN-OFF -->
-<footer id="contact" class="grid-bg-navy">
-  <div class="wrap">
-    <div class="sheet-header">
-      <h2>Sign-Off</h2>
-      <div class="code mono" style="color:var(--line-blue-soft);">MEP-05 / CONTACT</div>
-    </div>
+<!-- ========================================= -->
+<!-- EXPERIENCE -->
+<!-- ========================================= -->
 
-    <div class="contact-grid">
-      <div class="cell"><div class="label">Email</div><a class="val" href="mailto:Shaikyousuf0802@gmail.com">Shaikyousuf0802@gmail.com</a></div>
-      <div class="cell"><div class="label">Phone / WhatsApp</div><a class="val" href="tel:+917993171808">+91 79931 71808</a></div>
-      <div class="cell"><div class="label">Location</div><div class="val">Hyderabad, Telangana, India</div></div>
-      <div class="cell"><div class="label">Availability</div><div class="val">Immediate</div></div>
-    </div>
+<section id="experience" class="section">
 
-    <div class="foot-bottom">
-      <span>© 2026 Shaik Mohammed Yousuf Abdullah — MEP Design Engineer</span>
-      <span>Sheet Set MEP-00 to MEP-05 &nbsp;·&nbsp; Scale: N.T.S.</span>
-    </div>
-  </div>
+<div class="container">
+
+<div class="section-title">
+<h2>Professional Experience</h2>
+<p>Career Journey</p>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+
+2022 - Present
+
+</div>
+
+<div class="timeline-content">
+
+<h3>MEP Design Engineer</h3>
+
+<h4>Suntech Building Services</h4>
+
+<ul>
+
+<li>Designed HVAC systems up to 100 TR VRV.</li>
+
+<li>Prepared Heat Load Calculations using HAP.</li>
+
+<li>Designed Fire Fighting Systems.</li>
+
+<li>Prepared Plumbing Layouts.</li>
+
+<li>Developed Shop Drawings.</li>
+
+<li>Prepared BOQ & Material Submittals.</li>
+
+<li>Coordinated with Clients & Consultants.</li>
+
+<li>Site Execution & Commissioning.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- PROJECTS -->
+<!-- ========================================= -->
+
+<section id="projects" class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Featured Projects</h2>
+
+<p>Recent Engineering Works</p>
+
+</div>
+
+<div class="project-grid">
+
+<div class="project-card">
+
+<img src="images/project1.svg" alt="Commercial Building HVAC project illustration">
+
+<div class="project-info">
+
+<h3>Commercial Building HVAC</h3>
+
+<p>
+
+Heat Load Calculation
+
+VRV Design
+
+Duct Layout
+
+Equipment Selection
+
+</p>
+
+<a href="#">View Details →</a>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="images/project2.svg" alt="Fire Fighting Design project illustration">
+
+<div class="project-info">
+
+<h3>Fire Fighting Design</h3>
+
+<p>
+
+Sprinkler
+
+Hydrant
+
+Fire Pump
+
+Tank Design
+
+</p>
+
+<a href="#">View Details →</a>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="images/project3.svg" alt="Mechanical Design project illustration">
+
+<div class="project-info">
+
+<h3>Mechanical Design</h3>
+
+<p>
+
+3D Modeling
+
+Reverse Engineering
+
+Manufacturing Drawings
+
+</p>
+
+<a href="#">View Details →</a>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="images/project4.svg" alt="Plumbing Design project illustration">
+
+<div class="project-info">
+
+<h3>Plumbing Design</h3>
+
+<p>
+
+Water Supply
+
+Drainage
+
+Pump Selection
+
+Pipe Routing
+
+</p>
+
+<a href="#">View Details →</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- CERTIFICATIONS -->
+<!-- ========================================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Certifications</h2>
+
+<p>Professional Qualifications</p>
+
+</div>
+
+<div class="certificate-grid">
+
+<div class="certificate">
+
+🏅
+
+<h3>B.Tech Mechanical Engineering</h3>
+
+</div>
+
+<div class="certificate">
+
+🏅
+
+<h3>HVAC Design</h3>
+
+</div>
+
+<div class="certificate">
+
+🏅
+
+<h3>Revit MEP</h3>
+
+</div>
+
+<div class="certificate">
+
+🏅
+
+<h3>AutoCAD Professional</h3>
+
+</div>
+
+<div class="certificate">
+
+🏅
+
+<h3>SolidWorks</h3>
+
+</div>
+
+<div class="certificate">
+
+🏅
+
+<h3>NDT Level II</h3>
+
+</div>
+
+<div class="certificate">
+
+🏅
+
+<h3>Python Programming</h3>
+
+</div>
+
+<div class="certificate">
+
+🏅
+
+<h3>be10x AI Tools</h3>
+
+<p>AI-powered presentation design, data analysis, and coding/debugging</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= part-4 ================= -->
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="section">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Contact Me</h2>
+<p>Let's Build Something Great Together</p>
+</div>
+
+<div class="contact-wrapper">
+
+<div class="contact-info">
+
+<h3>Get In Touch</h3>
+
+<p>
+I'm available for Mechanical Design, HVAC, Fire Fighting,
+Plumbing and MEP Engineering opportunities worldwide.
+</p>
+
+<div class="contact-item">
+<i class="fas fa-envelope"></i>
+<span>Shaikyousuf0802@gmail.com</span>
+</div>
+
+<div class="contact-item">
+<i class="fas fa-phone"></i>
+<span>+91 79931 71808</span>
+</div>
+
+<div class="contact-item">
+<i class="fas fa-location-dot"></i>
+<span>Hyderabad, Telangana, India</span>
+</div>
+
+</div>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<input type="text" placeholder="Subject">
+
+<textarea rows="6" placeholder="Message"></textarea>
+
+<button class="btn">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Shaik Mohammed Yousuf
+
+Mechanical Design Engineer | MEP Engineer
+
+</p>
+
 </footer>
+
+<button id="topBtn">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
+
+<a class="whatsapp"
+
+href="https://wa.me/917993171808"
+
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+<script>
+// Scroll-to-top button
+const topBtn = document.getElementById('topBtn');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    topBtn.style.display = 'flex';
+  } else {
+    topBtn.style.display = 'none';
+  }
+});
+
+topBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Contact form -> opens the user's email client with prefilled message
+const contactForm = document.querySelector('.contact-form');
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name = contactForm.querySelector('input[type="text"]').value.trim();
+  const email = contactForm.querySelector('input[type="email"]').value.trim();
+  const subject = contactForm.querySelectorAll('input[type="text"]')[1].value.trim();
+  const message = contactForm.querySelector('textarea').value.trim();
+
+  if (!name || !email || !message) {
+    alert('Please fill in your name, email, and message before sending.');
+    return;
+  }
+
+  const mailSubject = encodeURIComponent(subject || `Portfolio contact from ${name}`);
+  const mailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+
+  window.location.href = `mailto:Shaikyousuf0802@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+});
+</script>
 
 </body>
 </html>
-<a href="assets/resume/Resume.pdf" download>
-Download Resume
-</a>
